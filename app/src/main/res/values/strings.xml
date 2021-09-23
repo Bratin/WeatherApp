@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Weather</string>
+    <string name="weatherImg">WeatherImg</string>
+    <string name="temp">"%s °C"</string>
+    <string name="feels_like">"Feels like %s °C"</string>
+    <string name="pressure">"Pressure: %s mb"</string>
+    <string name="wind_speed">Wind speed: %s km/h</string>
+    <string name="visibility">Visibility: %s km</string>
+    <string name="uv_index">UV Index: %s</string>
+</resources>
