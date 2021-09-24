@@ -23,8 +23,10 @@ class WeatherCard constructor(
 
     fun setWeatherData(data: WeatherData) {
         binding.apply {
-            tvLocation.text = String.format(
-                context.getString(R.string.location), data.name, data.region, data.country
+            tvLocation.text = if (data.region.isEmpty()) String.format(
+                context.getString(R.string.location), data.name, data.country
+            ) else String.format(
+                context.getString(R.string.location_r), data.name, data.region, data.country
             )
             Picasso.get().load(data.iconUrl).resize(IMAGE_SIZE, IMAGE_SIZE).into(weatherImg)
             tvWeatherCondition.text = data.weatherCondition

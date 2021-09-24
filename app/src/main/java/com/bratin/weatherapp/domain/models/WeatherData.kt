@@ -1,8 +1,12 @@
 package com.bratin.weatherapp.domain.models
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
 /**
  * Weather Data model
  */
+@Entity
 data class WeatherData(
     val weatherCondition: String,
     val iconUrl: String,
@@ -12,8 +16,10 @@ data class WeatherData(
     val feelsLikeTemp: Double,
     val pressure: Double,
     val windSpeed: Double,
-    val lastUpdated: String,
+    var lastUpdated: String = "",
     val name: String,
     val region: String,
-    val country: String
+    val country: String,
+    @PrimaryKey
+    var query: String = ""
 )

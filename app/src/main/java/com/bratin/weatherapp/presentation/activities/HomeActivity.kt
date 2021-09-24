@@ -20,7 +20,7 @@ class HomeActivity : AppCompatActivity() {
         setContentView(view)
 
         initWeatherDataObserver()
-        homeViewModel.getWeatherData("London")
+        homeViewModel.getWeatherData("auto:ip")
     }
 
     private fun initWeatherDataObserver() {

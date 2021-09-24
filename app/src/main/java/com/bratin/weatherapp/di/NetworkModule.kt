@@ -1,12 +1,15 @@
 package com.bratin.weatherapp.di
 
+import android.content.Context
 import com.bratin.weatherapp.BuildConfig
+import com.bratin.weatherapp.data.db.AppDatabase
 import com.bratin.weatherapp.data.service.APIService
 import com.bratin.weatherapp.data.service.EndPoint.BASE_URL
 import com.google.gson.GsonBuilder
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
+import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -37,4 +40,8 @@ object NetworkModule {
     @Provides
     @Singleton
     fun provideApiService(retrofit: Retrofit) = retrofit.create(APIService::class.java)
+
+    @Singleton
+    @Provides
+    fun provideDatabase(@ApplicationContext appContext: Context) = AppDatabase.getInstance(appContext)
 }
