@@ -9,4 +9,12 @@
     <string name="uv_index">UV Index: %s</string>
     <string name="location_r">%s, %s, %s</string>
     <string name="location">%s, %s</string>
+    <string name="last_updated">Last updated: %s</string>
+    <string name="current_location">Current Location</string>
+    <string name="london">London</string>
+    <string name="newyork">New York</string>
+    <string name="kolkata">Kolkata</string>
+    <string name="bangalore">Bangalore</string>
+    <string name="sydney">Sydney</string>
+    <string name="preference_file_key">pref</string>
 </resources>

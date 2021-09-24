@@ -23,7 +23,7 @@ class WeatherRepositoryImpl @Inject constructor(
         weatherData?.let {
             if (isUpdateFromServerNeeded(simpleDateFormat.format(Date()), it.lastUpdated)) {
                 callServer(query)
-            }
+            } else return weatherData
         } ?: callServer(query)
         return database.weatherDao().loadWeatherData(query)
     }

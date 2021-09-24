@@ -54,6 +54,9 @@ class WeatherCard constructor(
                 context.getString(R.string.uv_index),
                 tempFormat.format(data.uvIndex)
             )
+            tvLastUpdated.text = String.format(
+                context.getString(R.string.last_updated), data.lastUpdated
+            )
         }
     }
 
