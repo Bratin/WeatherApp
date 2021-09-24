@@ -12,5 +12,8 @@ data class WeatherData(
     val feelsLikeTemp: Double,
     val pressure: Double,
     val windSpeed: Double,
-    val lastUpdated: String
+    val lastUpdated: String,
+    val name: String,
+    val region: String,
+    val country: String
 )

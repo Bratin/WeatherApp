@@ -2,7 +2,7 @@ package com.bratin.weatherapp.data.models
 
 import com.google.gson.annotations.SerializedName
 
-data class WeatherDataResponse(val current: Current)
+data class WeatherDataResponse(val current: Current, val location: Location)
 
 data class Current(
     val condition: Condition,
@@ -14,6 +14,12 @@ data class Current(
     val vis_km: Double,
     val pressure_mb: Double,
     val last_updated: String
+)
+
+data class Location(
+    val name: String,
+    val region: String,
+    val country: String
 )
 
 data class Condition(val text: String, val icon: String)

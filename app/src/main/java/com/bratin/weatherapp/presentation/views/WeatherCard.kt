@@ -23,29 +23,32 @@ class WeatherCard constructor(
 
     fun setWeatherData(data: WeatherData) {
         binding.apply {
+            tvLocation.text = String.format(
+                context.getString(R.string.location), data.name, data.region, data.country
+            )
             Picasso.get().load(data.iconUrl).resize(IMAGE_SIZE, IMAGE_SIZE).into(weatherImg)
-            weatherCondition.text = data.weatherCondition
-            temperature.text = String.format(
+            tvWeatherCondition.text = data.weatherCondition
+            tvTemperature.text = String.format(
                 context.getString(R.string.temp),
                 tempFormat.format(data.feelsLikeTemp)
             )
-            feelsLike.text = String.format(
+            tvFeelsLike.text = String.format(
                 context.getString(R.string.feels_like),
                 tempFormat.format(data.feelsLikeTemp)
             )
-            pressure.text = String.format(
+            tvPressure.text = String.format(
                 context.getString(R.string.pressure),
                 tempFormat.format(data.pressure)
             )
-            windSpeed.text = String.format(
+            tvWindSpeed.text = String.format(
                 context.getString(R.string.wind_speed),
                 tempFormat.format(data.windSpeed)
             )
-            visibility.text = String.format(
+            tvVisibility.text = String.format(
                 context.getString(R.string.visibility),
                 tempFormat.format(data.visibility)
             )
-            uv.text = String.format(
+            tvUV.text = String.format(
                 context.getString(R.string.uv_index),
                 tempFormat.format(data.uvIndex)
             )

@@ -16,7 +16,10 @@ class WeatherDataMapper @Inject constructor() : BaseMapper<WeatherDataResponse, 
             uvIndex = it.uv,
             visibility = it.vis_km,
             iconUrl = "https:" + it.condition.icon,
-            windSpeed = it.wind_kph
+            windSpeed = it.wind_kph,
+            name = data.location.name,
+            region = data.location.region,
+            country = data.location.country
         )
     }
 }

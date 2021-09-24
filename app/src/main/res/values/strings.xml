@@ -7,4 +7,5 @@
     <string name="wind_speed">Wind speed: %s km/h</string>
     <string name="visibility">Visibility: %s km</string>
     <string name="uv_index">UV Index: %s</string>
+    <string name="location">%s, %s, %s</string>
 </resources>

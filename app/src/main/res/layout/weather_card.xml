@@ -6,29 +6,41 @@
     android:layout_height="match_parent"
     tools:context=".presentation.activities.HomeActivity">
 
+    <TextView
+        android:id="@+id/tvLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/primaryColor"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="London" />
+
     <ImageView
         android:id="@+id/weatherImg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:background="@drawable/image_bg"
         android:contentDescription="@string/weatherImg"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvLocation"
         tools:src="@mipmap/ic_launcher_round" />
 
     <TextView
-        android:id="@+id/weatherCondition"
+        android:id="@+id/tvWeatherCondition"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:textColor="@color/black"
         android:textSize="22sp"
-        app:layout_constraintStart_toEndOf="@+id/weatherImg"
-        app:layout_constraintTop_toTopOf="@+id/weatherImg"
+        app:layout_constraintStart_toEndOf="@id/weatherImg"
+        app:layout_constraintTop_toTopOf="@id/weatherImg"
         tools:text="Cloudy" />
 
     <TextView
-        android:id="@+id/temperature"
+        android:id="@+id/tvTemperature"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_marginTop="8dp"
@@ -42,57 +54,59 @@
         tools:text="31 C" />
 
     <TextView
-        android:id="@+id/feelsLike"
+        android:id="@+id/tvFeelsLike"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
-        app:layout_constraintStart_toEndOf="@id/temperature"
-        app:layout_constraintTop_toTopOf="@id/temperature"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/tvTemperature"
+        app:layout_constraintTop_toTopOf="@id/tvTemperature"
         tools:text="Feels like 33 C" />
 
     <TextView
-        android:id="@+id/windSpeed"
+        android:id="@+id/tvWindSpeed"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:textColor="@color/black"
-        app:layout_constraintEnd_toStartOf="@id/pressure"
+        app:layout_constraintEnd_toStartOf="@id/tvPressure"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintHorizontal_chainStyle="spread"
-        app:layout_constraintTop_toBottomOf="@id/temperature"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTemperature"
         tools:text="Wind Speed" />
 
     <TextView
-        android:id="@+id/pressure"
+        android:id="@+id/tvPressure"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/windSpeed"
-        app:layout_constraintTop_toTopOf="@+id/windSpeed"
+        app:layout_constraintStart_toEndOf="@id/tvWindSpeed"
+        app:layout_constraintTop_toTopOf="@id/tvWindSpeed"
         tools:text="Pressure" />
 
     <TextView
-        android:id="@+id/visibility"
+        android:id="@+id/tvVisibility"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:textColor="@color/black"
-        app:layout_constraintEnd_toStartOf="@+id/pressure"
+        app:layout_constraintEnd_toStartOf="@id/tvPressure"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/windSpeed"
+        app:layout_constraintTop_toBottomOf="@id/tvWindSpeed"
         tools:text="Visibility" />
 
     <TextView
-        android:id="@+id/uv"
+        android:id="@+id/tvUV"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/visibility"
-        app:layout_constraintTop_toTopOf="@id/visibility"
+        app:layout_constraintStart_toEndOf="@id/tvVisibility"
+        app:layout_constraintTop_toTopOf="@id/tvVisibility"
         tools:text="UV Index" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
