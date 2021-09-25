@@ -14,7 +14,7 @@ class Util {
     }
 
     private companion object {
-        private const val CURRENT_TIME = "2021-09-23 11:15"
+        private const val CURRENT_TIME = "2021-09-23 11:16"
         private const val SERVER_TIME1 = "2021-09-23 11:10"
         private const val SERVER_TIME2 = "2021-09-23 11:13"
     }
